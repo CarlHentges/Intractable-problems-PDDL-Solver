@@ -1,64 +1,95 @@
-﻿; Problem description
-; Describe one scenario within the domain constraints
-; This one describes the Tower of Hanoi with 3 discs
-(define (problem pb1)
-  (:metric minimize (total-cost))
-  (:domain CS170)
+﻿; Domain description
+; Describe the relations and transitions that can occur
+; This one describes the Tower of Hanoi puzzle
+(define (domain CS170) ; Domain name must match problem's
 
-  ; Objects are candidates to replace free variables
-  (:objects TA_Wheeler TA_Campanile TA_Corry TA_RSF Soda Dwinell Wheeler Campanile Corry RSF Barrows)
-
-  ; The initial state describe what is currently true
-  ; Everything else is considered false
-  
-  (:init
-        (= (total-cost) 0)
-        
-        (Car_At Soda)
-        (InCar TA_Wheeler)
-        (InCar TA_Campanile)
-        (InCar TA_Corry)
-        (InCar TA_RSF)
-        
-        (Path Soda Dwinell) (Path Dwinell Soda)
-        (Path Soda Campanile)(Path Campanile Soda)
-        (Path Soda Barrows)(Path Barrows Soda)
-        (Path Dwinell Campanile)(Path Campanile Dwinell)
-        (Path Wheeler Campanile)(Path Campanile Wheeler)
-        (Path Campanile Corry)(Path Corry Campanile)
-        (Path Campanile RSF)(Path RSF Campanile)
-        (Path Campanile Barrows)(Path Barrows Campanile)
-
- 		(= (Distance Soda Dwinell) 1)
- 		(= (Distance Dwinell Soda) 1)
-        (= (Distance Soda Campanile) 1)
-        (= (Distance Campanile Soda) 1)
-        (= (Distance Soda Barrows) 1)
-        (= (Distance Barrows Soda) 1)
-        (= (Distance Dwinell Campanile) 1)
-        (= (Distance Campanile Dwinell) 1)
-        (= (Distance Wheeler Campanile) 1)
-        (= (Distance Campanile Wheeler) 1)
-        (= (Distance Campanile Corry) 1)
-        (= (Distance Corry Campanile) 1)
-        (= (Distance Campanile RSF) 1)
-        (= (Distance RSF Campanile) 1)
-        (= (Distance Campanile Barrows) 1)
-        (= (Distance Barrows Campanile) 1)
-        
-        (EmptyHome Wheeler)
-        (EmptyHome Campanile)
-        (EmptyHome Corry)
-        (EmptyHome RSF)
-        
+  ; Define what the planner must support to execute this domain
+  ; Only domain requirements are currently supported
+  (:requirements
+    :strips                 ; basic preconditions and effects
+    :negative-preconditions ; to use not in preconditions
+    :equality               ; to use = in preconditions
+    ; :typing               ; to define type of objects and parameters
+    :fluents
   )
+ (:functions
+  (total-cost)
+  (Distance ?t ?f)
+  )
+  ; Define the relations
+  ; Question mark prefix denotes free variables
+  (:predicates
+    (TA_At ?t ?x)      ; a TA ?t is at location ?x
+    (Car_At ?x)     ; the car is at location ?x
+    (Path ?x ?y)    ; there exists a path between locations ?x and ?y
+    (InCar ?t)
+    (EmptyHome ?l)
+  )
+  
 
-  ; The goal state describe what we desire to achieve
-  (:goal (and
-    (Car_At Soda)
-    (not (EmptyHome Wheeler))
-    (not (EmptyHome Campanile))
-    (not (EmptyHome Corry))
-    (not (EmptyHome RSF))
-  ))
+  ; Define a transition to move a disc from one place to another
+  (:action walk
+    :parameters (?ta ?from ?to)
+    ; Only conjunction or atomic preconditions are supported
+    :precondition (and
+      (TA_At ?ta ?from)
+      (Path ?from ?to)
+      (not (= ?from ?to)) ; Negative precondition and equality
+    )
+    
+    ; Only conjunction or atomic effects are supported
+    :effect (and
+      ; Note that adding the new relations is not enough
+      (TA_At ?ta ?to)
+      (not (TA_At ?ta ?from))
+      (increase (total-cost) (*(Distance ?to ?from)3))
+    )
+  )
+  (:action HomeSafe
+    :parameters (?ta ?location)
+    ; Only conjunction or atomic preconditions are supported
+    :precondition (and
+      (TA_At ?ta ?location)
+      (EmptyHome ?location)
+    )
+    ; Only conjunction or atomic effects are supported
+    :effect (and
+      ; Note that adding the new relations is not enough
+      (not (TA_At ?ta ?location))
+      (not (EmptyHome ?location))
+    )
+  )
+  (:action drive
+    :parameters (?from ?to)
+    ; Only conjunction or atomic preconditions are supported
+    :precondition (and
+      (Car_At ?from)
+      (Path ?from ?to)
+      (not (= ?from ?to)) ; Negative precondition and equality
+    )
+    
+    ; Only conjunction or atomic effects are supported
+    :effect (and
+      ; Note that adding the new relations is not enough
+      (Car_At ?to)
+      (not (Car_At ?from))
+      (increase (total-cost) (*(Distance ?to ?from)2))
+    )
+  )
+  (:action DropOff
+    :parameters (?ta ?location)
+    ; Only conjunction or atomic preconditions are supported
+    :precondition (and
+      (Car_At ?location)
+      (InCar ?ta)
+    )
+    ; Only conjunction or atomic effects are supported
+    :effect (and
+      ; Note that adding the new relations is not enough
+      (Ta_At ?ta ?location)
+      (not (InCar ?ta))
+    )
+  )
+  
+  ; Other transitions can be defined here
 )
