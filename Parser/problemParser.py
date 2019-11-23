@@ -7,7 +7,6 @@
 #
 
 import random
-import random
 import string
 
 # gets the input from the user indicating what input file to use
