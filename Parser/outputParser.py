@@ -51,9 +51,9 @@ while line:
 	elif(line[0:5] == "(DROP"):
 		temp = line.strip("()").split()
 		taDrop[temp[1]] = temp[2][1:]
+		inCaseOfNoDrive = temp[2][1:]
 	elif( line[0:5] == "(WALK"):
 		temp = line.strip("()").split()
-		inCaseOfNoDrive = temp[2][1:]
 		#print("walk",line)
 	elif( line[0:5] == "(HOME"):
 		#print("home",line)
@@ -71,6 +71,8 @@ def debug():
 	print("DROP",taDrop)
 	print("MATCH",taMatching)
 	print("OUTPUT DROP",outputDrop)
+debug()
+
 
 # this does the magic:
 # since TAs do not neccessaraly go to their own homes
@@ -78,6 +80,7 @@ def debug():
 # with the ta dropoff locations
 # then they are added to the set whcich contains all
 # the dropoff locaitons
+locationsAlreadyDropedOff = set()
 for k in taMatching:
 	if taDrop[k] in outputDrop:
 		outputDrop[taDrop[k]].add(taMatching[k])
@@ -94,11 +97,14 @@ output+=str(len(outputDrop))+"\n"
 # (note the format is DROPOFF_LOCATION TA_GOAL_1 TA_GOAL_2 ...)
 for loc in carRout:
 	if loc in outputDrop:
-		output+=loc
-		for x in outputDrop[loc]:
-			output+= " " + x
-		output +="\n"
+		if not(loc in locationsAlreadyDropedOff):
+			locationsAlreadyDropedOff.add(loc)
+			output+=loc
+			for x in outputDrop[loc]:
+				output+= " " + x
+			output +="\n"
 #Print the ouput to verify that everything worked
 print(output)
+print(locationsAlreadyDropedOff)
 # and write it to the outout file
 o.write(output)

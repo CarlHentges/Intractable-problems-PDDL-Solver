@@ -10,7 +10,7 @@ import random
 import string
 
 # gets the input from the user indicating what input file to use
-PROBLEM_FILE = str(input("Enter problem file name: "))+".in"
+PROBLEM_FILE = str(input("Enter problem file name: "))
 # f is the input file (opened in read mode)
 f = open(PROBLEM_FILE, "r")
 # O is the ouput file (opened in write mode)
