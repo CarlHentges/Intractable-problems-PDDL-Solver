@@ -23,14 +23,12 @@
 
 
 import random
-import random
 import string
-
-
+import sys
 # VARIABLES:
-LOCATION_NUMBER = int(input("Number of locations? "))	# number of locations
-TA_NUMBER = int(input("Number of TAs? "))				# number of TAs
-P = 0													# mutation rate (float) default = 0 MAX = 1
+LOCATION_NUMBER = int(sys.argv[1])	# number of locations
+TA_NUMBER = int(sys.argv[2])				# number of TAs
+P = int(stys.argv[3])												# mutation rate (float) default = 0 MAX = 1
 
 
 def randomString(stringLength=20):

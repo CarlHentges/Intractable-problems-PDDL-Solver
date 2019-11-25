@@ -7,14 +7,14 @@
 
 import random
 import string
-
+import sys
 # gets the input from the user indicating what solution file to use
-SOLUTION_FILE = str(input("Enter SOLUTION_FILE file name: "))
+SOLUTION_FILE = str(sys.argv[1])
 # f is the input file (opened in read mode)
 f = open(SOLUTION_FILE, "r")
 
 # O is the ouput file (opened in write mode)
-o = open(""+SOLUTION_FILE[0:len(SOLUTION_FILE)-3] +"Solution.out", "w")
+o = open(sys.argv[2], "w")
 # output will ultamately be written to the ouput file
 output = ""
 

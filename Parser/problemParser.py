@@ -8,13 +8,16 @@
 
 import random
 import string
+import sys
+
 
 # gets the input from the user indicating what input file to use
-PROBLEM_FILE = str(input("Enter problem file name: "))
+PROBLEM_FILE = str(sys.argv[1])
+OUTPUT_FILE = str(sys.argv[2])
 # f is the input file (opened in read mode)
 f = open(PROBLEM_FILE, "r")
 # O is the ouput file (opened in write mode)
-o = open("PDDLproblem"+PROBLEM_FILE[0:len(PROBLEM_FILE)-3] +".pddl", "w")
+o = open(OUTPUT_FILE, "w")
 # output will ultamately be written to the ouput file
 output = ""
 # Get Variables from the input file line by line
