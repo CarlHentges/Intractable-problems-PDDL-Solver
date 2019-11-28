@@ -13,32 +13,32 @@ SOLUTION_FILE = str(sys.argv[1])
 # f is the input file (opened in read mode)
 f = open(SOLUTION_FILE, "r")
 
-# O is the ouput file (opened in write mode)
+# O is the output file (opened in write mode)
 o = open(sys.argv[2], "w")
-# output will ultamately be written to the ouput file
+# output will ultimately be written to the output file
 output = ""
 
-# Flag: the initial location of the car must also be stred
+# Flag: the initial location of the car must also be stored
 initCar = True
 # stores the rout that the car takes
 carRout = []
-# which ta gets to what home
+# which TA gets to what home
 taMatching = {}
-# where each ta gets off
+# where each TA gets off
 taDrop = {}
-# for each location on the cars rout which tas get off where
+# for each location on the cars rout which TAs get off where
 # this is a dictionary with a set as its values since if multiple
-# tas get off at the same location they must all be listed in the
+# TAs get off at the same location they must all be listed in the
 # same line
 outputDrop = {}
 # if the car does not go anywhere then the initial location must be
-# found based off of other information sice the ouptut spec requres
+# found based off of other information since the output spec requires
 # the initial location of the car to be specified
 inCaseOfNoDrive = ""
 
-# itterate line by line through the solution file, for each of the 4
+# iterate line by line through the solution file, for each of the 4
 # possible actions (Walk Drive Dropoff and Homesafe) pars it and add
-# the information to the relivant list above
+# the information to the relevant list above
 line = f.readline().rstrip()
 while line:
 	if (line[0:5] == "(DRIV"):
@@ -60,8 +60,8 @@ while line:
 		temp = line.strip("()").split()
 		taMatching[temp[1]] = temp[2][1:]
 	line = f.readline().rstrip()
-# if the car does not drive during the plan the inital location
-# is found through other means and aded to the rout
+# if the car does not drive during the plan the initial location
+# is found through other means and added to the rout
 if(carRout == []):
 	carRout.append(inCaseOfNoDrive)
 
@@ -75,11 +75,11 @@ debug()
 
 
 # this does the magic:
-# since TAs do not neccessaraly go to their own homes
+# since TAs do not necessarily go to their own homes
 # we treat them as a variable and match the locations
-# with the ta dropoff locations
-# then they are added to the set whcich contains all
-# the dropoff locaitons
+# with the TA drop-off locations
+# then they are added to the set which contains all
+# the drop-off locations
 locationsAlreadyDropedOff = set()
 for k in taMatching:
 	if taDrop[k] in outputDrop:
@@ -90,10 +90,10 @@ for k in taMatching:
 for loc in carRout:
 	output += loc+ " "
 output += "\n"
-# the number of dropoff locations is addded to the output
+# the number of drop-off locations is added to the output
 output+=str(len(outputDrop))+"\n"
 # in the order that the car visits the locations the
-# tas that get off at each location are printed
+# TAs that get off at each location are printed
 # (note the format is DROPOFF_LOCATION TA_GOAL_1 TA_GOAL_2 ...)
 for loc in carRout:
 	if loc in outputDrop:
@@ -103,8 +103,8 @@ for loc in carRout:
 			for x in outputDrop[loc]:
 				output+= " " + x
 			output +="\n"
-#Print the ouput to verify that everything worked
+#Print the output to verify that everything worked
 print(output)
 print(locationsAlreadyDropedOff)
-# and write it to the outout file
+# and write it to the output file
 o.write(output)
