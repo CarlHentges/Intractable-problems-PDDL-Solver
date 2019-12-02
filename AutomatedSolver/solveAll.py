@@ -12,6 +12,11 @@
 # TODO: make directory structure based on local directory
 
 import os
+import sys
+
+PROBLEM_SIZE = str(sys.argv[1])
+PROBLEM_BATCH_START = int(sys.argv[2])
+PROBLEM_BATCH_END = int(sys.argv[3])
 
 # the directories where the inputs are found, as well as the output locations for
 # the different stages of solving the problem (see above)
@@ -39,7 +44,7 @@ counter = 0
 # essentially go through each file in the input and directory , run the program and output it in the input of the
 # next stage of the program, do this for all stages of the program 
 for file in os.listdir(INPUT_DIRECTORY):
-	if "50" in file and counter < 5:		# this limits the program to only solving size 50 problems
+	if PROBLEM_SIZE in file and counter < and int(file[:len(file)-(len(PROBLEM_SIZE)+3)]) < PROBLEM_BATCH_START and int(file[:len(file)-(len(PROBLEM_SIZE)+3)]) > PROBLEM_BATCH_END:		# this limits the program to only solving size 50 problems
 		os.system("python3 "+inputToInvariant+" "+INPUT_DIRECTORY+file+" "+NORMALIZED_INPUT_DIRECTORY+file[:len(file)-3]+"_LOWER.in")
 		#counter += 1
 for file in os.listdir(NORMALIZED_INPUT_DIRECTORY):
