@@ -1,0 +1,983 @@
+; Problem description
+; This file describes the example input from the problem statement
+(define (problem pb1)
+  (:metric minimize (total-cost))
+  (:domain CS170)
+(:objects TA_X1 TA_X5 TA_X6 TA_X7 TA_X8 TA_X19 X1 X2 X3 X4 X5 X6 X7 X8 X9 X10 X11 X12 X13 X14 X15 X16 X17 X18 X19 X20 )
+(:init(= (total-cost) 0)
+( Car_At X1 )
+(InCar TA_X1)
+(InCar TA_X5)
+(InCar TA_X6)
+(InCar TA_X7)
+(InCar TA_X8)
+(InCar TA_X19)
+(Path X1 X2 )
+(Path X2 X1 )
+(= (Distance X1 X2 )5)
+(= (Distance X2 X1 )5)
+
+(Path X1 X3 )
+(Path X3 X1 )
+(= (Distance X1 X3 )3)
+(= (Distance X3 X1 )3)
+
+(Path X1 X4 )
+(Path X4 X1 )
+(= (Distance X1 X4 )4)
+(= (Distance X4 X1 )4)
+
+(Path X1 X5 )
+(Path X5 X1 )
+(= (Distance X1 X5 )1)
+(= (Distance X5 X1 )1)
+
+(Path X1 X6 )
+(Path X6 X1 )
+(= (Distance X1 X6 )3)
+(= (Distance X6 X1 )3)
+
+(Path X1 X7 )
+(Path X7 X1 )
+(= (Distance X1 X7 )6)
+(= (Distance X7 X1 )6)
+
+(Path X1 X8 )
+(Path X8 X1 )
+(= (Distance X1 X8 )4)
+(= (Distance X8 X1 )4)
+
+(Path X1 X9 )
+(Path X9 X1 )
+(= (Distance X1 X9 )5)
+(= (Distance X9 X1 )5)
+
+(Path X1 X10 )
+(Path X10 X1 )
+(= (Distance X1 X10 )2)
+(= (Distance X10 X1 )2)
+
+(Path X1 X11 )
+(Path X11 X1 )
+(= (Distance X1 X11 )4)
+(= (Distance X11 X1 )4)
+
+(Path X1 X12 )
+(Path X12 X1 )
+(= (Distance X1 X12 )4)
+(= (Distance X12 X1 )4)
+
+(Path X1 X13 )
+(Path X13 X1 )
+(= (Distance X1 X13 )2)
+(= (Distance X13 X1 )2)
+
+(Path X1 X14 )
+(Path X14 X1 )
+(= (Distance X1 X14 )6)
+(= (Distance X14 X1 )6)
+
+(Path X1 X15 )
+(Path X15 X1 )
+(= (Distance X1 X15 )4)
+(= (Distance X15 X1 )4)
+
+(Path X1 X16 )
+(Path X16 X1 )
+(= (Distance X1 X16 )4)
+(= (Distance X16 X1 )4)
+
+(Path X1 X17 )
+(Path X17 X1 )
+(= (Distance X1 X17 )5)
+(= (Distance X17 X1 )5)
+
+(Path X1 X18 )
+(Path X18 X1 )
+(= (Distance X1 X18 )4)
+(= (Distance X18 X1 )4)
+
+(Path X1 X19 )
+(Path X19 X1 )
+(= (Distance X1 X19 )3)
+(= (Distance X19 X1 )3)
+
+(Path X1 X20 )
+(Path X20 X1 )
+(= (Distance X1 X20 )5)
+(= (Distance X20 X1 )5)
+
+(Path X2 X3 )
+(Path X3 X2 )
+(= (Distance X2 X3 )3)
+(= (Distance X3 X2 )3)
+
+(Path X2 X4 )
+(Path X4 X2 )
+(= (Distance X2 X4 )5)
+(= (Distance X4 X2 )5)
+
+(Path X2 X5 )
+(Path X5 X2 )
+(= (Distance X2 X5 )5)
+(= (Distance X5 X2 )5)
+
+(Path X2 X6 )
+(Path X6 X2 )
+(= (Distance X2 X6 )5)
+(= (Distance X6 X2 )5)
+
+(Path X2 X7 )
+(Path X7 X2 )
+(= (Distance X2 X7 )6)
+(= (Distance X7 X2 )6)
+
+(Path X2 X8 )
+(Path X8 X2 )
+(= (Distance X2 X8 )1)
+(= (Distance X8 X2 )1)
+
+(Path X2 X9 )
+(Path X9 X2 )
+(= (Distance X2 X9 )4)
+(= (Distance X9 X2 )4)
+
+(Path X2 X10 )
+(Path X10 X2 )
+(= (Distance X2 X10 )4)
+(= (Distance X10 X2 )4)
+
+(Path X2 X11 )
+(Path X11 X2 )
+(= (Distance X2 X11 )3)
+(= (Distance X11 X2 )3)
+
+(Path X2 X12 )
+(Path X12 X2 )
+(= (Distance X2 X12 )4)
+(= (Distance X12 X2 )4)
+
+(Path X2 X13 )
+(Path X13 X2 )
+(= (Distance X2 X13 )6)
+(= (Distance X13 X2 )6)
+
+(Path X2 X14 )
+(Path X14 X2 )
+(= (Distance X2 X14 )4)
+(= (Distance X14 X2 )4)
+
+(Path X2 X15 )
+(Path X15 X2 )
+(= (Distance X2 X15 )2)
+(= (Distance X15 X2 )2)
+
+(Path X2 X16 )
+(Path X16 X2 )
+(= (Distance X2 X16 )2)
+(= (Distance X16 X2 )2)
+
+(Path X2 X17 )
+(Path X17 X2 )
+(= (Distance X2 X17 )4)
+(= (Distance X17 X2 )4)
+
+(Path X2 X18 )
+(Path X18 X2 )
+(= (Distance X2 X18 )4)
+(= (Distance X18 X2 )4)
+
+(Path X2 X19 )
+(Path X19 X2 )
+(= (Distance X2 X19 )5)
+(= (Distance X19 X2 )5)
+
+(Path X2 X20 )
+(Path X20 X2 )
+(= (Distance X2 X20 )3)
+(= (Distance X20 X2 )3)
+
+(Path X3 X4 )
+(Path X4 X3 )
+(= (Distance X3 X4 )5)
+(= (Distance X4 X3 )5)
+
+(Path X3 X5 )
+(Path X5 X3 )
+(= (Distance X3 X5 )2)
+(= (Distance X5 X3 )2)
+
+(Path X3 X6 )
+(Path X6 X3 )
+(= (Distance X3 X6 )4)
+(= (Distance X6 X3 )4)
+
+(Path X3 X7 )
+(Path X7 X3 )
+(= (Distance X3 X7 )3)
+(= (Distance X7 X3 )3)
+
+(Path X3 X8 )
+(Path X8 X3 )
+(= (Distance X3 X8 )2)
+(= (Distance X8 X3 )2)
+
+(Path X3 X9 )
+(Path X9 X3 )
+(= (Distance X3 X9 )4)
+(= (Distance X9 X3 )4)
+
+(Path X3 X10 )
+(Path X10 X3 )
+(= (Distance X3 X10 )4)
+(= (Distance X10 X3 )4)
+
+(Path X3 X11 )
+(Path X11 X3 )
+(= (Distance X3 X11 )3)
+(= (Distance X11 X3 )3)
+
+(Path X3 X12 )
+(Path X12 X3 )
+(= (Distance X3 X12 )3)
+(= (Distance X12 X3 )3)
+
+(Path X3 X13 )
+(Path X13 X3 )
+(= (Distance X3 X13 )3)
+(= (Distance X13 X3 )3)
+
+(Path X3 X14 )
+(Path X14 X3 )
+(= (Distance X3 X14 )5)
+(= (Distance X14 X3 )5)
+
+(Path X3 X15 )
+(Path X15 X3 )
+(= (Distance X3 X15 )1)
+(= (Distance X15 X3 )1)
+
+(Path X3 X16 )
+(Path X16 X3 )
+(= (Distance X3 X16 )3)
+(= (Distance X16 X3 )3)
+
+(Path X3 X17 )
+(Path X17 X3 )
+(= (Distance X3 X17 )4)
+(= (Distance X17 X3 )4)
+
+(Path X3 X18 )
+(Path X18 X3 )
+(= (Distance X3 X18 )4)
+(= (Distance X18 X3 )4)
+
+(Path X3 X19 )
+(Path X19 X3 )
+(= (Distance X3 X19 )5)
+(= (Distance X19 X3 )5)
+
+(Path X3 X20 )
+(Path X20 X3 )
+(= (Distance X3 X20 )4)
+(= (Distance X20 X3 )4)
+
+(Path X4 X5 )
+(Path X5 X4 )
+(= (Distance X4 X5 )4)
+(= (Distance X5 X4 )4)
+
+(Path X4 X6 )
+(Path X6 X4 )
+(= (Distance X4 X6 )5)
+(= (Distance X6 X4 )5)
+
+(Path X4 X7 )
+(Path X7 X4 )
+(= (Distance X4 X7 )5)
+(= (Distance X7 X4 )5)
+
+(Path X4 X8 )
+(Path X8 X4 )
+(= (Distance X4 X8 )4)
+(= (Distance X8 X4 )4)
+
+(Path X4 X9 )
+(Path X9 X4 )
+(= (Distance X4 X9 )4)
+(= (Distance X9 X4 )4)
+
+(Path X4 X10 )
+(Path X10 X4 )
+(= (Distance X4 X10 )3)
+(= (Distance X10 X4 )3)
+
+(Path X4 X11 )
+(Path X11 X4 )
+(= (Distance X4 X11 )3)
+(= (Distance X11 X4 )3)
+
+(Path X4 X12 )
+(Path X12 X4 )
+(= (Distance X4 X12 )3)
+(= (Distance X12 X4 )3)
+
+(Path X4 X13 )
+(Path X13 X4 )
+(= (Distance X4 X13 )5)
+(= (Distance X13 X4 )5)
+
+(Path X4 X14 )
+(Path X14 X4 )
+(= (Distance X4 X14 )5)
+(= (Distance X14 X4 )5)
+
+(Path X4 X15 )
+(Path X15 X4 )
+(= (Distance X4 X15 )5)
+(= (Distance X15 X4 )5)
+
+(Path X4 X16 )
+(Path X16 X4 )
+(= (Distance X4 X16 )3)
+(= (Distance X16 X4 )3)
+
+(Path X4 X17 )
+(Path X17 X4 )
+(= (Distance X4 X17 )4)
+(= (Distance X17 X4 )4)
+
+(Path X4 X18 )
+(Path X18 X4 )
+(= (Distance X4 X18 )3)
+(= (Distance X18 X4 )3)
+
+(Path X4 X19 )
+(Path X19 X4 )
+(= (Distance X4 X19 )1)
+(= (Distance X19 X4 )1)
+
+(Path X4 X20 )
+(Path X20 X4 )
+(= (Distance X4 X20 )2)
+(= (Distance X20 X4 )2)
+
+(Path X5 X6 )
+(Path X6 X5 )
+(= (Distance X5 X6 )2)
+(= (Distance X6 X5 )2)
+
+(Path X5 X7 )
+(Path X7 X5 )
+(= (Distance X5 X7 )5)
+(= (Distance X7 X5 )5)
+
+(Path X5 X8 )
+(Path X8 X5 )
+(= (Distance X5 X8 )4)
+(= (Distance X8 X5 )4)
+
+(Path X5 X9 )
+(Path X9 X5 )
+(= (Distance X5 X9 )4)
+(= (Distance X9 X5 )4)
+
+(Path X5 X10 )
+(Path X10 X5 )
+(= (Distance X5 X10 )3)
+(= (Distance X10 X5 )3)
+
+(Path X5 X11 )
+(Path X11 X5 )
+(= (Distance X5 X11 )4)
+(= (Distance X11 X5 )4)
+
+(Path X5 X12 )
+(Path X12 X5 )
+(= (Distance X5 X12 )3)
+(= (Distance X12 X5 )3)
+
+(Path X5 X13 )
+(Path X13 X5 )
+(= (Distance X5 X13 )1)
+(= (Distance X13 X5 )1)
+
+(Path X5 X14 )
+(Path X14 X5 )
+(= (Distance X5 X14 )6)
+(= (Distance X14 X5 )6)
+
+(Path X5 X15 )
+(Path X15 X5 )
+(= (Distance X5 X15 )3)
+(= (Distance X15 X5 )3)
+
+(Path X5 X16 )
+(Path X16 X5 )
+(= (Distance X5 X16 )5)
+(= (Distance X16 X5 )5)
+
+(Path X5 X17 )
+(Path X17 X5 )
+(= (Distance X5 X17 )5)
+(= (Distance X17 X5 )5)
+
+(Path X5 X18 )
+(Path X18 X5 )
+(= (Distance X5 X18 )4)
+(= (Distance X18 X5 )4)
+
+(Path X5 X19 )
+(Path X19 X5 )
+(= (Distance X5 X19 )3)
+(= (Distance X19 X5 )3)
+
+(Path X5 X20 )
+(Path X20 X5 )
+(= (Distance X5 X20 )5)
+(= (Distance X20 X5 )5)
+
+(Path X6 X7 )
+(Path X7 X6 )
+(= (Distance X6 X7 )6)
+(= (Distance X7 X6 )6)
+
+(Path X6 X8 )
+(Path X8 X6 )
+(= (Distance X6 X8 )5)
+(= (Distance X8 X6 )5)
+
+(Path X6 X9 )
+(Path X9 X6 )
+(= (Distance X6 X9 )4)
+(= (Distance X9 X6 )4)
+
+(Path X6 X10 )
+(Path X10 X6 )
+(= (Distance X6 X10 )2)
+(= (Distance X10 X6 )2)
+
+(Path X6 X11 )
+(Path X11 X6 )
+(= (Distance X6 X11 )5)
+(= (Distance X11 X6 )5)
+
+(Path X6 X12 )
+(Path X12 X6 )
+(= (Distance X6 X12 )3)
+(= (Distance X12 X6 )3)
+
+(Path X6 X13 )
+(Path X13 X6 )
+(= (Distance X6 X13 )3)
+(= (Distance X13 X6 )3)
+
+(Path X6 X14 )
+(Path X14 X6 )
+(= (Distance X6 X14 )5)
+(= (Distance X14 X6 )5)
+
+(Path X6 X15 )
+(Path X15 X6 )
+(= (Distance X6 X15 )5)
+(= (Distance X15 X6 )5)
+
+(Path X6 X16 )
+(Path X16 X6 )
+(= (Distance X6 X16 )4)
+(= (Distance X16 X6 )4)
+
+(Path X6 X17 )
+(Path X17 X6 )
+(= (Distance X6 X17 )4)
+(= (Distance X17 X6 )4)
+
+(Path X6 X18 )
+(Path X18 X6 )
+(= (Distance X6 X18 )2)
+(= (Distance X18 X6 )2)
+
+(Path X6 X19 )
+(Path X19 X6 )
+(= (Distance X6 X19 )5)
+(= (Distance X19 X6 )5)
+
+(Path X6 X20 )
+(Path X20 X6 )
+(= (Distance X6 X20 )3)
+(= (Distance X20 X6 )3)
+
+(Path X7 X8 )
+(Path X8 X7 )
+(= (Distance X7 X8 )5)
+(= (Distance X8 X7 )5)
+
+(Path X7 X9 )
+(Path X9 X7 )
+(= (Distance X7 X9 )2)
+(= (Distance X9 X7 )2)
+
+(Path X7 X10 )
+(Path X10 X7 )
+(= (Distance X7 X10 )5)
+(= (Distance X10 X7 )5)
+
+(Path X7 X11 )
+(Path X11 X7 )
+(= (Distance X7 X11 )5)
+(= (Distance X11 X7 )5)
+
+(Path X7 X12 )
+(Path X12 X7 )
+(= (Distance X7 X12 )3)
+(= (Distance X12 X7 )3)
+
+(Path X7 X13 )
+(Path X13 X7 )
+(= (Distance X7 X13 )6)
+(= (Distance X13 X7 )6)
+
+(Path X7 X14 )
+(Path X14 X7 )
+(= (Distance X7 X14 )4)
+(= (Distance X14 X7 )4)
+
+(Path X7 X15 )
+(Path X15 X7 )
+(= (Distance X7 X15 )4)
+(= (Distance X15 X7 )4)
+
+(Path X7 X16 )
+(Path X16 X7 )
+(= (Distance X7 X16 )4)
+(= (Distance X16 X7 )4)
+
+(Path X7 X17 )
+(Path X17 X7 )
+(= (Distance X7 X17 )5)
+(= (Distance X17 X7 )5)
+
+(Path X7 X18 )
+(Path X18 X7 )
+(= (Distance X7 X18 )4)
+(= (Distance X18 X7 )4)
+
+(Path X7 X19 )
+(Path X19 X7 )
+(= (Distance X7 X19 )4)
+(= (Distance X19 X7 )4)
+
+(Path X7 X20 )
+(Path X20 X7 )
+(= (Distance X7 X20 )5)
+(= (Distance X20 X7 )5)
+
+(Path X8 X9 )
+(Path X9 X8 )
+(= (Distance X8 X9 )4)
+(= (Distance X9 X8 )4)
+
+(Path X8 X10 )
+(Path X10 X8 )
+(= (Distance X8 X10 )3)
+(= (Distance X10 X8 )3)
+
+(Path X8 X11 )
+(Path X11 X8 )
+(= (Distance X8 X11 )2)
+(= (Distance X11 X8 )2)
+
+(Path X8 X12 )
+(Path X12 X8 )
+(= (Distance X8 X12 )3)
+(= (Distance X12 X8 )3)
+
+(Path X8 X13 )
+(Path X13 X8 )
+(= (Distance X8 X13 )5)
+(= (Distance X13 X8 )5)
+
+(Path X8 X14 )
+(Path X14 X8 )
+(= (Distance X8 X14 )3)
+(= (Distance X14 X8 )3)
+
+(Path X8 X15 )
+(Path X15 X8 )
+(= (Distance X8 X15 )1)
+(= (Distance X15 X8 )1)
+
+(Path X8 X16 )
+(Path X16 X8 )
+(= (Distance X8 X16 )1)
+(= (Distance X16 X8 )1)
+
+(Path X8 X17 )
+(Path X17 X8 )
+(= (Distance X8 X17 )3)
+(= (Distance X17 X8 )3)
+
+(Path X8 X18 )
+(Path X18 X8 )
+(= (Distance X8 X18 )3)
+(= (Distance X18 X8 )3)
+
+(Path X8 X19 )
+(Path X19 X8 )
+(= (Distance X8 X19 )4)
+(= (Distance X19 X8 )4)
+
+(Path X8 X20 )
+(Path X20 X8 )
+(= (Distance X8 X20 )2)
+(= (Distance X20 X8 )2)
+
+(Path X9 X10 )
+(Path X10 X9 )
+(= (Distance X9 X10 )4)
+(= (Distance X10 X9 )4)
+
+(Path X9 X11 )
+(Path X11 X9 )
+(= (Distance X9 X11 )5)
+(= (Distance X11 X9 )5)
+
+(Path X9 X12 )
+(Path X12 X9 )
+(= (Distance X9 X12 )1)
+(= (Distance X12 X9 )1)
+
+(Path X9 X13 )
+(Path X13 X9 )
+(= (Distance X9 X13 )5)
+(= (Distance X13 X9 )5)
+
+(Path X9 X14 )
+(Path X14 X9 )
+(= (Distance X9 X14 )5)
+(= (Distance X14 X9 )5)
+
+(Path X9 X15 )
+(Path X15 X9 )
+(= (Distance X9 X15 )3)
+(= (Distance X15 X9 )3)
+
+(Path X9 X16 )
+(Path X16 X9 )
+(= (Distance X9 X16 )4)
+(= (Distance X16 X9 )4)
+
+(Path X9 X17 )
+(Path X17 X9 )
+(= (Distance X9 X17 )4)
+(= (Distance X17 X9 )4)
+
+(Path X9 X18 )
+(Path X18 X9 )
+(= (Distance X9 X18 )2)
+(= (Distance X18 X9 )2)
+
+(Path X9 X19 )
+(Path X19 X9 )
+(= (Distance X9 X19 )5)
+(= (Distance X19 X9 )5)
+
+(Path X9 X20 )
+(Path X20 X9 )
+(= (Distance X9 X20 )3)
+(= (Distance X20 X9 )3)
+
+(Path X10 X11 )
+(Path X11 X10 )
+(= (Distance X10 X11 )3)
+(= (Distance X11 X10 )3)
+
+(Path X10 X12 )
+(Path X12 X10 )
+(= (Distance X10 X12 )3)
+(= (Distance X12 X10 )3)
+
+(Path X10 X13 )
+(Path X13 X10 )
+(= (Distance X10 X13 )4)
+(= (Distance X13 X10 )4)
+
+(Path X10 X14 )
+(Path X14 X10 )
+(= (Distance X10 X14 )5)
+(= (Distance X14 X10 )5)
+
+(Path X10 X15 )
+(Path X15 X10 )
+(= (Distance X10 X15 )3)
+(= (Distance X15 X10 )3)
+
+(Path X10 X16 )
+(Path X16 X10 )
+(= (Distance X10 X16 )2)
+(= (Distance X16 X10 )2)
+
+(Path X10 X17 )
+(Path X17 X10 )
+(= (Distance X10 X17 )4)
+(= (Distance X17 X10 )4)
+
+(Path X10 X18 )
+(Path X18 X10 )
+(= (Distance X10 X18 )2)
+(= (Distance X18 X10 )2)
+
+(Path X10 X19 )
+(Path X19 X10 )
+(= (Distance X10 X19 )4)
+(= (Distance X19 X10 )4)
+
+(Path X10 X20 )
+(Path X20 X10 )
+(= (Distance X10 X20 )3)
+(= (Distance X20 X10 )3)
+
+(Path X11 X12 )
+(Path X12 X11 )
+(= (Distance X11 X12 )4)
+(= (Distance X12 X11 )4)
+
+(Path X11 X13 )
+(Path X13 X11 )
+(= (Distance X11 X13 )5)
+(= (Distance X13 X11 )5)
+
+(Path X11 X14 )
+(Path X14 X11 )
+(= (Distance X11 X14 )2)
+(= (Distance X14 X11 )2)
+
+(Path X11 X15 )
+(Path X15 X11 )
+(= (Distance X11 X15 )3)
+(= (Distance X15 X11 )3)
+
+(Path X11 X16 )
+(Path X16 X11 )
+(= (Distance X11 X16 )1)
+(= (Distance X16 X11 )1)
+
+(Path X11 X17 )
+(Path X17 X11 )
+(= (Distance X11 X17 )1)
+(= (Distance X17 X11 )1)
+
+(Path X11 X18 )
+(Path X18 X11 )
+(= (Distance X11 X18 )3)
+(= (Distance X18 X11 )3)
+
+(Path X11 X19 )
+(Path X19 X11 )
+(= (Distance X11 X19 )4)
+(= (Distance X19 X11 )4)
+
+(Path X11 X20 )
+(Path X20 X11 )
+(= (Distance X11 X20 )2)
+(= (Distance X20 X11 )2)
+
+(Path X12 X13 )
+(Path X13 X12 )
+(= (Distance X12 X13 )4)
+(= (Distance X13 X12 )4)
+
+(Path X12 X14 )
+(Path X14 X12 )
+(= (Distance X12 X14 )4)
+(= (Distance X14 X12 )4)
+
+(Path X12 X15 )
+(Path X15 X12 )
+(= (Distance X12 X15 )2)
+(= (Distance X15 X12 )2)
+
+(Path X12 X16 )
+(Path X16 X12 )
+(= (Distance X12 X16 )3)
+(= (Distance X16 X12 )3)
+
+(Path X12 X17 )
+(Path X17 X12 )
+(= (Distance X12 X17 )3)
+(= (Distance X17 X12 )3)
+
+(Path X12 X18 )
+(Path X18 X12 )
+(= (Distance X12 X18 )1)
+(= (Distance X18 X12 )1)
+
+(Path X12 X19 )
+(Path X19 X12 )
+(= (Distance X12 X19 )4)
+(= (Distance X19 X12 )4)
+
+(Path X12 X20 )
+(Path X20 X12 )
+(= (Distance X12 X20 )2)
+(= (Distance X20 X12 )2)
+
+(Path X13 X14 )
+(Path X14 X13 )
+(= (Distance X13 X14 )7)
+(= (Distance X14 X13 )7)
+
+(Path X13 X15 )
+(Path X15 X13 )
+(= (Distance X13 X15 )4)
+(= (Distance X15 X13 )4)
+
+(Path X13 X16 )
+(Path X16 X13 )
+(= (Distance X13 X16 )6)
+(= (Distance X16 X13 )6)
+
+(Path X13 X17 )
+(Path X17 X13 )
+(= (Distance X13 X17 )6)
+(= (Distance X17 X13 )6)
+
+(Path X13 X18 )
+(Path X18 X13 )
+(= (Distance X13 X18 )5)
+(= (Distance X18 X13 )5)
+
+(Path X13 X19 )
+(Path X19 X13 )
+(= (Distance X13 X19 )4)
+(= (Distance X19 X13 )4)
+
+(Path X13 X20 )
+(Path X20 X13 )
+(= (Distance X13 X20 )6)
+(= (Distance X20 X13 )6)
+
+(Path X14 X15 )
+(Path X15 X14 )
+(= (Distance X14 X15 )4)
+(= (Distance X15 X14 )4)
+
+(Path X14 X16 )
+(Path X16 X14 )
+(= (Distance X14 X16 )3)
+(= (Distance X16 X14 )3)
+
+(Path X14 X17 )
+(Path X17 X14 )
+(= (Distance X14 X17 )1)
+(= (Distance X17 X14 )1)
+
+(Path X14 X18 )
+(Path X18 X14 )
+(= (Distance X14 X18 )3)
+(= (Distance X18 X14 )3)
+
+(Path X14 X19 )
+(Path X19 X14 )
+(= (Distance X14 X19 )5)
+(= (Distance X19 X14 )5)
+
+(Path X14 X20 )
+(Path X20 X14 )
+(= (Distance X14 X20 )4)
+(= (Distance X20 X14 )4)
+
+(Path X15 X16 )
+(Path X16 X15 )
+(= (Distance X15 X16 )2)
+(= (Distance X16 X15 )2)
+
+(Path X15 X17 )
+(Path X17 X15 )
+(= (Distance X15 X17 )4)
+(= (Distance X17 X15 )4)
+
+(Path X15 X18 )
+(Path X18 X15 )
+(= (Distance X15 X18 )3)
+(= (Distance X18 X15 )3)
+
+(Path X15 X19 )
+(Path X19 X15 )
+(= (Distance X15 X19 )5)
+(= (Distance X19 X15 )5)
+
+(Path X15 X20 )
+(Path X20 X15 )
+(= (Distance X15 X20 )3)
+(= (Distance X20 X15 )3)
+
+(Path X16 X17 )
+(Path X17 X16 )
+(= (Distance X16 X17 )2)
+(= (Distance X17 X16 )2)
+
+(Path X16 X18 )
+(Path X18 X16 )
+(= (Distance X16 X18 )2)
+(= (Distance X18 X16 )2)
+
+(Path X16 X19 )
+(Path X19 X16 )
+(= (Distance X16 X19 )3)
+(= (Distance X19 X16 )3)
+
+(Path X16 X20 )
+(Path X20 X16 )
+(= (Distance X16 X20 )1)
+(= (Distance X20 X16 )1)
+
+(Path X17 X18 )
+(Path X18 X17 )
+(= (Distance X17 X18 )2)
+(= (Distance X18 X17 )2)
+
+(Path X17 X19 )
+(Path X19 X17 )
+(= (Distance X17 X19 )4)
+(= (Distance X19 X17 )4)
+
+(Path X17 X20 )
+(Path X20 X17 )
+(= (Distance X17 X20 )3)
+(= (Distance X20 X17 )3)
+
+(Path X18 X19 )
+(Path X19 X18 )
+(= (Distance X18 X19 )4)
+(= (Distance X19 X18 )4)
+
+(Path X18 X20 )
+(Path X20 X18 )
+(= (Distance X18 X20 )1)
+(= (Distance X20 X18 )1)
+
+(Path X19 X20 )
+(Path X20 X19 )
+(= (Distance X19 X20 )3)
+(= (Distance X20 X19 )3)
+
+(EmptyHome X1)
+(EmptyHome X5)
+(EmptyHome X6)
+(EmptyHome X7)
+(EmptyHome X8)
+(EmptyHome X19)
+)
+
+  ; The goal state describe what we desire to achieve
+  (:goal (and
+( Car_At X1 )
+(not (EmptyHome X1))
+(not (EmptyHome X5))
+(not (EmptyHome X6))
+(not (EmptyHome X7))
+(not (EmptyHome X8))
+(not (EmptyHome X19))
+  ))
+)

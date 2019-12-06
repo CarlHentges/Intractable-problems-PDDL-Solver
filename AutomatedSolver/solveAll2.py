@@ -27,7 +27,7 @@ PDDL_DOMAIN = "/home/carl/CS170_Project/Intractable-problems-PDDL-Solver/CS170.p
 
 # the locations of the different directories that will be run on the input files
 PDDL_PLANNER = "/home/carl/CS170_Project/LAPKT-public/planners/BFWS/ff-version/bfws"
-PDDL_PLANNER = "/home/carl/CS170_Project/LAPKT-public/planners/at_bfs_f-ffparser/at_bfs_f"
+#PDDL_PLANNER = "/home/carl/CS170_Project/LAPKT-public/planners/at_bfs_f-ffparser/at_bfs_f"
 inputToInvariant = "/home/carl/CS170_Project/Intractable-problems-PDDL-Solver/Parser/inputToInvariant.py"
 outputParser = "/home/carl/CS170_Project/Intractable-problems-PDDL-Solver/Parser/outputParser.py"
 outputToNorm = "/home/carl/CS170_Project/Intractable-problems-PDDL-Solver/Parser/outputToNorm.py"
@@ -43,10 +43,10 @@ pddlSolved = os.listdir(PDDL_OUTPUT_DIRECTORY)
 def isSolved(name):
 	for file in pddlSolved:
 		#print(name[:len(name)-3],end="")
-		if name[:len(name)-3] in file:
-			#print(name[:len(name)-3]," True")
+		if name[:len(name)-11] in file:
+			#print(name[:len(name)-11]," True")
 			return True
-	#print(name[:len(name)-3]," False")
+	#print(name[:len(name)-11]," False")
 	return False
 
 # essentially go through each file in the input and directory , run the program and output it in the input of the
@@ -54,27 +54,56 @@ def isSolved(name):
 
 
 #for file in os.listdir(INPUT_DIRECTORY):
-#	if "100" in file and not isSolved(file) :		# this limits the program to only solving size 50 problems
-#		os.system("python3 "+inputToInvariant+" "+INPUT_DIRECTORY+file+" "+NORMALIZED_INPUT_DIRECTORY+file[:len(file)-3]+"_LOWER.in")
-#		#counter += 1
+#	os.system("python3 "+inputToInvariant+" "+INPUT_DIRECTORY+file+" "+NORMALIZED_INPUT_DIRECTORY+file[:len(file)-3]+"_LOWER.in")
 #for file in os.listdir(NORMALIZED_INPUT_DIRECTORY):
 #		os.system("python3 "+problemParser+" "+NORMALIZED_INPUT_DIRECTORY+file+" "+PDDL_INPUT_DIRECTORY+file[:len(file)-3]+".pddl")
 
 f = os.listdir(PDDL_INPUT_DIRECTORY)
 random.shuffle(f) 
 
-for file in f:
-	if not isSolved(file) and file[4:7] == "100":
-		print(file)
-		os.system(PDDL_PLANNER +" --domain "+PDDL_DOMAIN+" --problem "+PDDL_INPUT_DIRECTORY+file+" --output "+PDDL_OUTPUT_DIRECTORY+file[:len(file)-5]+"SOLVED_.pddl")
+#val = open("/home/carl/CS170_Project/Intractable-problems-PDDL-Solver/OUTPUT/SolutionQuality.txt", "r")
+#for line in val:
+#	temp = line.split(",")
+#	if temp[1].strip() == "'infinite'":
+#		print(temp[0][:len(temp)-7])
+#		for file in os.listdir(PDDL_OUTPUT_DIRECTORY):
+#			if os.path.exists(PDDL_OUTPUT_DIRECTORY+temp[0][:len(temp)-7]+"_LOWERSOLVED_.pddl"):
+#				os.remove(PDDL_OUTPUT_DIRECTORY+temp[0][:len(temp)-7]+"_LOWERSOLVED_.pddl")
+#				print(temp[0][:len(temp)-7],"removes")
+
+#for file in f:
+#	if not isSolved(file):
+#		print(file)
+#		os.system(PDDL_PLANNER +" --domain "+PDDL_DOMAIN+" --problem "+PDDL_INPUT_DIRECTORY+file+" --output "+PDDL_OUTPUT_DIRECTORY+file[:len(file)-5]+"SOLVED_.pddl")
 
 #for file in os.listdir(PDDL_INPUT_DIRECTORY):
 #	if "100" in file and not isSolved(file) and int(file[1]) >=5:
 #		os.system(PDDL_PLANNER +" --domain "+PDDL_DOMAIN+" --problem "+PDDL_INPUT_DIRECTORY+file+" --output "+PDDL_OUTPUT_DIRECTORY+file[:len(file)-5]+"SOLVED_.pddl")
-#for file in os.listdir(PDDL_OUTPUT_DIRECTORY):
-#		os.system("python3 "+outputToNorm+" "+PDDL_OUTPUT_DIRECTORY+file+" "+PDDL_NORMALIZED_OUTPUT_DIRECTORY+file[:len(file)-5]+".out")
-#for file in os.listdir(PDDL_NORMALIZED_OUTPUT_DIRECTORY):
-#		os.system("python3 "+outputParser+" "+PDDL_NORMALIZED_OUTPUT_DIRECTORY+file+" "+OUTPUT_DIRECTORY+file[:len(file)-17]+".out")
+for file in os.listdir(PDDL_OUTPUT_DIRECTORY):
+		os.system("python3 "+outputToNorm+" "+PDDL_OUTPUT_DIRECTORY+file+" "+PDDL_NORMALIZED_OUTPUT_DIRECTORY+file[:len(file)-5]+".out")
+for file in os.listdir(PDDL_NORMALIZED_OUTPUT_DIRECTORY):
+		os.system("python3 "+outputParser+" "+PDDL_NORMALIZED_OUTPUT_DIRECTORY+file+" "+OUTPUT_DIRECTORY+file[:len(file)-17]+".out")
+for file in os.listdir(OUTPUT_DIRECTORY):
+	print(file,os.path.getsize(OUTPUT_DIRECTORY+file))
+	if not os.path.getsize(OUTPUT_DIRECTORY+file) > 5:
+		print("removeing ",file)
+		os.remove(OUTPUT_DIRECTORY+file)
+		for file in os.listdir(PDDL_OUTPUT_DIRECTORY):
+			if os.path.exists(PDDL_OUTPUT_DIRECTORY+file[:len(file)-3]+"_LOWERSOLVED_.pddl"):
+				os.remove(PDDL_OUTPUT_DIRECTORY+file[0][:len(file)-3]+"_LOWERSOLVED_.pddl")
+				print(temp[0][:len(temp)-3],"removes")
+os.system("python3 /home/carl/CS170_Project/Intractable-problems-PDDL-Solver/solutionQuality.py")
+val = open("/home/carl/CS170_Project/Intractable-problems-PDDL-Solver/OUTPUT/SolutionQuality.txt", "r")
+for line in val:
+	temp = line.split(",")
+	if temp[1].strip() == "'infinite'":
+		os.remove(OUTPUT_DIRECTORY+temp[0].strip())
+		print(temp[0][:len(temp)-7])
+		for file in os.listdir(PDDL_OUTPUT_DIRECTORY):
+			if os.path.exists(PDDL_OUTPUT_DIRECTORY+temp[0][:len(temp)-7]+"_LOWERSOLVED_.pddl"):
+				os.remove(PDDL_OUTPUT_DIRECTORY+temp[0][:len(temp)-7]+"_LOWERSOLVED_.pddl")
+				print(temp[0][:len(temp)-7],"removes")
+os.system("python3 /home/carl/CS170_Project/project-fa19/compress_output.py "+OUTPUT_DIRECTORY)
 #for file in os.listdir(OUTPUT_DIRECTORY):
 #	print("python3 "+output_validator+" "+INPUT_DIRECTORY+file[:len(file)-4]+".in "+OUTPUT_DIRECTORY+file)
 #	os.system("python3 "+output_validator+" "+INPUT_DIRECTORY+file[:len(file)-4]+".in "+OUTPUT_DIRECTORY+file)

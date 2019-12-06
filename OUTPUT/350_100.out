@@ -6,14 +6,14 @@ c c
 qqqqqq qqqqqq
 ffffffff ffffffff
 fffffff fffffff
-uu xxxxxx wwww ff pp ttttt q
+uu xxxxxx ttttt ff pp q wwww
 v v
 zzz zzz
 rrrrrr rrrrrr
 ssssss ssssss
 uuuuu uuuuu
 jjjjjjj jjjjjjj
-aaa jjjj uu aaa hhhh vvvv p ggggg
+aaa jjjj hhhh aaa uu vvvv ggggg p
 llllll llllll
 s s
 ssss ssss
@@ -21,7 +21,7 @@ j j
 vv vv
 z z
 ss ss
-qqqqqqq qqqqqqq ggg rrrrrrrr aaaaa dddddddd iii hhh bbbbbbbb eeee
+qqqqqqq bbbbbbbb rrrrrrrr ggg aaaaa qqqqqqq dddddddd hhh iii eeee
 m m
 wwwwwww wwwwwww
 lllll lllll

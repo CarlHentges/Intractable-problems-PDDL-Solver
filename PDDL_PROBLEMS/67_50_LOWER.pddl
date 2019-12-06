@@ -1,0 +1,88 @@
+; Problem description
+; This file describes the example input from the problem statement
+(define (problem pb1)
+  (:metric minimize (total-cost))
+  (:domain CS170)
+(:objects TA_X_b_a_n_g_s TA_X_l_i_p_s_t_i_c_k TA_X_n_o_s_e TA_X_e_y_e_s TA_X_e_y_e_l_a_s_h_e_s TA_X_b_o_y X_l_i_p_s X_b_a_n_g_s X_l_i_p_s_t_i_c_k X_n_o_s_e X_e_y_e_s X_e_y_e_l_a_s_h_e_s X_b_o_y )
+(:init(= (total-cost) 0)
+( Car_At X_l_i_p_s )
+(InCar TA_X_b_a_n_g_s)
+(InCar TA_X_l_i_p_s_t_i_c_k)
+(InCar TA_X_n_o_s_e)
+(InCar TA_X_e_y_e_s)
+(InCar TA_X_e_y_e_l_a_s_h_e_s)
+(InCar TA_X_b_o_y)
+(Path X_l_i_p_s X_b_a_n_g_s )
+(Path X_b_a_n_g_s X_l_i_p_s )
+(= (Distance X_l_i_p_s X_b_a_n_g_s )6)
+(= (Distance X_b_a_n_g_s X_l_i_p_s )6)
+
+(Path X_l_i_p_s X_l_i_p_s_t_i_c_k )
+(Path X_l_i_p_s_t_i_c_k X_l_i_p_s )
+(= (Distance X_l_i_p_s X_l_i_p_s_t_i_c_k )1)
+(= (Distance X_l_i_p_s_t_i_c_k X_l_i_p_s )1)
+
+(Path X_l_i_p_s X_n_o_s_e )
+(Path X_n_o_s_e X_l_i_p_s )
+(= (Distance X_l_i_p_s X_n_o_s_e )6)
+(= (Distance X_n_o_s_e X_l_i_p_s )6)
+
+(Path X_b_a_n_g_s X_l_i_p_s_t_i_c_k )
+(Path X_l_i_p_s_t_i_c_k X_b_a_n_g_s )
+(= (Distance X_b_a_n_g_s X_l_i_p_s_t_i_c_k )7)
+(= (Distance X_l_i_p_s_t_i_c_k X_b_a_n_g_s )7)
+
+(Path X_b_a_n_g_s X_e_y_e_s )
+(Path X_e_y_e_s X_b_a_n_g_s )
+(= (Distance X_b_a_n_g_s X_e_y_e_s )7)
+(= (Distance X_e_y_e_s X_b_a_n_g_s )7)
+
+(Path X_l_i_p_s_t_i_c_k X_n_o_s_e )
+(Path X_n_o_s_e X_l_i_p_s_t_i_c_k )
+(= (Distance X_l_i_p_s_t_i_c_k X_n_o_s_e )7)
+(= (Distance X_n_o_s_e X_l_i_p_s_t_i_c_k )7)
+
+(Path X_l_i_p_s_t_i_c_k X_e_y_e_s )
+(Path X_e_y_e_s X_l_i_p_s_t_i_c_k )
+(= (Distance X_l_i_p_s_t_i_c_k X_e_y_e_s )1)
+(= (Distance X_e_y_e_s X_l_i_p_s_t_i_c_k )1)
+
+(Path X_l_i_p_s_t_i_c_k X_e_y_e_l_a_s_h_e_s )
+(Path X_e_y_e_l_a_s_h_e_s X_l_i_p_s_t_i_c_k )
+(= (Distance X_l_i_p_s_t_i_c_k X_e_y_e_l_a_s_h_e_s )7)
+(= (Distance X_e_y_e_l_a_s_h_e_s X_l_i_p_s_t_i_c_k )7)
+
+(Path X_n_o_s_e X_e_y_e_l_a_s_h_e_s )
+(Path X_e_y_e_l_a_s_h_e_s X_n_o_s_e )
+(= (Distance X_n_o_s_e X_e_y_e_l_a_s_h_e_s )8)
+(= (Distance X_e_y_e_l_a_s_h_e_s X_n_o_s_e )8)
+
+(Path X_e_y_e_s X_e_y_e_l_a_s_h_e_s )
+(Path X_e_y_e_l_a_s_h_e_s X_e_y_e_s )
+(= (Distance X_e_y_e_s X_e_y_e_l_a_s_h_e_s )8)
+(= (Distance X_e_y_e_l_a_s_h_e_s X_e_y_e_s )8)
+
+(Path X_e_y_e_l_a_s_h_e_s X_b_o_y )
+(Path X_b_o_y X_e_y_e_l_a_s_h_e_s )
+(= (Distance X_e_y_e_l_a_s_h_e_s X_b_o_y )1)
+(= (Distance X_b_o_y X_e_y_e_l_a_s_h_e_s )1)
+
+(EmptyHome X_b_a_n_g_s)
+(EmptyHome X_l_i_p_s_t_i_c_k)
+(EmptyHome X_n_o_s_e)
+(EmptyHome X_e_y_e_s)
+(EmptyHome X_e_y_e_l_a_s_h_e_s)
+(EmptyHome X_b_o_y)
+)
+
+  ; The goal state describe what we desire to achieve
+  (:goal (and
+( Car_At X_l_i_p_s )
+(not (EmptyHome X_b_a_n_g_s))
+(not (EmptyHome X_l_i_p_s_t_i_c_k))
+(not (EmptyHome X_n_o_s_e))
+(not (EmptyHome X_e_y_e_s))
+(not (EmptyHome X_e_y_e_l_a_s_h_e_s))
+(not (EmptyHome X_b_o_y))
+  ))
+)

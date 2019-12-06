@@ -25,10 +25,10 @@ OUPUT_FILE = "/home/carl/CS170_Project/Intractable-problems-PDDL-Solver/OUTPUT/S
 
 
 # Optional alternative inputs:
-if(sys.argv[1] and sys.argv[2] and sys.argv[3]):
-	PROBLEM_INPUTS = str(sys.argv[1])
-	PROBLEM_SOLUTIONS = str(sys.argv[2])
-	OUPUT_FILE = str(sys.argv[3])
+#if(sys.argv[1] and sys.argv[2] and sys.argv[3]):
+#	PROBLEM_INPUTS = str(sys.argv[1])
+#	PROBLEM_SOLUTIONS = str(sys.argv[2])
+#	OUPUT_FILE = str(sys.argv[3])
 
 # the output string will be written to the output file
 output = ""
@@ -41,7 +41,7 @@ problemInputs.sort()
 problemSolutions.sort()
 # for every file in the solutions, determine the solution cost and then add that to the output string
 for file in problemSolutions:
-	if file[len(file)-3:] =="out":
+	if file[len(file)-3:] =="out" and file[0] != ".":
 		output += file + " , "
 		# the solution validator outputs a lot of comma separated data, field 1 contains the cost of the solution
 		output +=str(validate_output(PROBLEM_INPUTS + file[:len(file)-3]+"in",PROBLEM_SOLUTIONS + file,[])).split(",")[1]

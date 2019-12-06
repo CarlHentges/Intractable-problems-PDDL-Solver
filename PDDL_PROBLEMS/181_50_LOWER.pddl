@@ -1,0 +1,95 @@
+; Problem description
+; This file describes the example input from the problem statement
+(define (problem pb1)
+  (:metric minimize (total-cost))
+  (:domain CS170)
+(:objects TA_X1 TA_X3 TA_X8 TA_X9 TA_X10 X0 X1 X2 X3 X4 X5 X6 X7 X8 X9 X10 )
+(:init(= (total-cost) 0)
+( Car_At X0 )
+(InCar TA_X1)
+(InCar TA_X3)
+(InCar TA_X8)
+(InCar TA_X9)
+(InCar TA_X10)
+(Path X0 X1 )
+(Path X1 X0 )
+(= (Distance X0 X1 )2)
+(= (Distance X1 X0 )2)
+
+(Path X0 X2 )
+(Path X2 X0 )
+(= (Distance X0 X2 )1)
+(= (Distance X2 X0 )1)
+
+(Path X0 X3 )
+(Path X3 X0 )
+(= (Distance X0 X3 )3)
+(= (Distance X3 X0 )3)
+
+(Path X0 X4 )
+(Path X4 X0 )
+(= (Distance X0 X4 )2)
+(= (Distance X4 X0 )2)
+
+(Path X0 X5 )
+(Path X5 X0 )
+(= (Distance X0 X5 )5)
+(= (Distance X5 X0 )5)
+
+(Path X0 X6 )
+(Path X6 X0 )
+(= (Distance X0 X6 )2)
+(= (Distance X6 X0 )2)
+
+(Path X0 X7 )
+(Path X7 X0 )
+(= (Distance X0 X7 )3)
+(= (Distance X7 X0 )3)
+
+(Path X1 X2 )
+(Path X2 X1 )
+(= (Distance X1 X2 )1)
+(= (Distance X2 X1 )1)
+
+(Path X1 X7 )
+(Path X7 X1 )
+(= (Distance X1 X7 )4)
+(= (Distance X7 X1 )4)
+
+(Path X1 X8 )
+(Path X8 X1 )
+(= (Distance X1 X8 )1)
+(= (Distance X8 X1 )1)
+
+(Path X1 X9 )
+(Path X9 X1 )
+(= (Distance X1 X9 )2)
+(= (Distance X9 X1 )2)
+
+(Path X4 X10 )
+(Path X10 X4 )
+(= (Distance X4 X10 )3)
+(= (Distance X10 X4 )3)
+
+(Path X5 X10 )
+(Path X10 X5 )
+(= (Distance X5 X10 )1)
+(= (Distance X10 X5 )1)
+
+(EmptyHome X1)
+(EmptyHome X3)
+(EmptyHome X8)
+(EmptyHome X9)
+(EmptyHome X10)
+)
+
+  ; The goal state describe what we desire to achieve
+  (:goal (and
+( Car_At X0 )
+(not (EmptyHome X1))
+(not (EmptyHome X3))
+(not (EmptyHome X8))
+(not (EmptyHome X9))
+(not (EmptyHome X10))
+  ))
+)

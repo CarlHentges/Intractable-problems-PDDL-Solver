@@ -42,7 +42,7 @@ while line:
 				output+= char.lower()
 				makeLower = False
 			else:
-				output+= character	# if not then uppercase
+				output+= char	# if not then uppercase
 		output+=" X"
 		for char in temp[2][1:]:	# do the same for the remaining words in line
 			if char == '_':
