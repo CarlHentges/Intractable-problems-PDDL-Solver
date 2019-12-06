@@ -1,0 +1,45 @@
+40
+20
+_k_a0 _k_a1 _k_a2 _k_a3 _k_a4 _k_a5 _k_a6 _k_a7 _k_a8 _k_a9 _k_b0 _k_b1 _k_b2 _k_b3 _k_b4 _k_b5 _k_b6 _k_b7 _k_b8 _k_b9 _k_c0 _k_c1 _k_c2 _k_c3 _k_c4 _k_c5 _k_c6 _k_c7 _k_c8 _k_c9 _k_d0 _k_d1 _k_d2 _k_d3 _k_d4 _k_d5 _k_d6 _k_d7 _k_d8 _k_d9 
+_k_a2 _k_a5 _k_a6 _k_a7 _k_a8 _k_b2 _k_b5 _k_b6 _k_b7 _k_b8 _k_c1 _k_c2 _k_c5 _k_c6 _k_c8 _k_d1 _k_d3 _k_d4 _k_d5 _k_d8 
+_k_a0
+x x 10.0 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 1 
+x x x x x x 45.0 x 45.0 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 
+10.0 x x 12.0 9.0 21.0 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 
+x x 12.0 x x x 27.0 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 
+x x 9.0 x x x 6.0 18.0 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 
+x x 21.0 x x x x 15.0 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 
+x 45.0 x 27.0 6.0 x x x x 18.0 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 
+x x x x 18.0 15.0 x x 9.0 32.0 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 
+x 45.0 x x x x x 9.0 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 
+x x x x x x 18.0 32.0 x x 1 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 
+x x x x x x x x x 1 x 60.0 60.0 x x x x x x x x x x x x x x x x x x x x x x x x x x x 
+x x x x x x x x x x 60.0 x x 30.0 45.0 x x x x x x x x x x x x x x x x x x x x x x x x x 
+x x x x x x x x x x 60.0 x x x x 15.0 33.0 x x x x x x x x x x x x x x x x x x x x x x x 
+x x x x x x x x x x x 30.0 x x x x x 18.0 x x x x x x x x x x x x x x x x x x x x x x 
+x x x x x x x x x x x 45.0 x x x x x 12.0 42.0 x x x x x x x x x x x x x x x x x x x x x 
+x x x x x x x x x x x x 15.0 x x x x x 51.0 99.0 x x x x x x x x x x x x x x x x x x x x 
+x x x x x x x x x x x x 33.0 x x x x x x 51.0 x x x x x x x x x x x x x x x x x x x x 
+x x x x x x x x x x x x x 18.0 12.0 x x x x x x x x x x x x x x x x x x x x x x x x x 
+x x x x x x x x x x x x x x 42.0 51.0 x x x x x x x x x x x x x x x x x x x x x x x x 
+x x x x x x x x x x x x x x x 99.0 51.0 x x x 1 x x x x x x x x x x x x x x x x x x x 
+x x x x x x x x x x x x x x x x x x x 1 x 9.0 45.0 x x x x x x 99.0 x x x x x x x x x x 
+x x x x x x x x x x x x x x x x x x x x 9.0 x x 45.0 x x x x 99.0 x x x x x x x x x x x 
+x x x x x x x x x x x x x x x x x x x x 45.0 x x 9.0 45.0 x x x x x x x x x x x x x x x 
+x x x x x x x x x x x x x x x x x x x x x 45.0 9.0 x x 45.0 x x x x x x x x x x x x x x 
+x x x x x x x x x x x x x x x x x x x x x x 45.0 x x 9.0 45.0 x x x x x x x x x x x x x 
+x x x x x x x x x x x x x x x x x x x x x x x 45.0 9.0 x x 45.0 x x x x x x x x x x x x 
+x x x x x x x x x x x x x x x x x x x x x x x x 45.0 x x 9.0 x 45.0 x x x x x x x x x x 
+x x x x x x x x x x x x x x x x x x x x x x x x x 45.0 9.0 x 45.0 x x x x x x x x x x x 
+x x x x x x x x x x x x x x x x x x x x x 99.0 x x x x x 45.0 x 9.0 x x x x x x x x x x 
+x x x x x x x x x x x x x x x x x x x x 99.0 x x x x x 45.0 x 9.0 x 1 x x x x x x x x x 
+x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 1 x 3.0 96.0 x x x x x x 99.0 
+x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 3.0 x x 99.0 x x x 60.0 99.0 x 
+x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 96.0 x x 12.0 3.0 x x x x x 
+x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 99.0 12.0 x x x x 60.0 x x 
+x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 3.0 x x x 20.0 51.0 x x 
+x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 40.0 60.0 99.0 x 
+x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 20.0 40.0 x x x 60.0 
+x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 60.0 x 60.0 51.0 60.0 x x 40.0 x 
+x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 99.0 x x x 99.0 x 40.0 x 3.0 
+1 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 99.0 x x x x x 60.0 x 3.0 x 

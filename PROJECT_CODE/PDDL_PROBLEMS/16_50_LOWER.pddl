@@ -1,0 +1,178 @@
+; Problem description
+; This file describes the example input from the problem statement
+(define (problem pb1)
+  (:metric minimize (total-cost))
+  (:domain CS170)
+(:objects TA_X1 TA_X5 TA_X6 TA_X14 TA_X19 TA_X20 X1 X2 X3 X4 X5 X6 X7 X8 X9 X10 X11 X12 X13 X14 X15 X16 X17 X18 X19 X20 X21 X22 X23 )
+(:init(= (total-cost) 0)
+( Car_At X2 )
+(InCar TA_X1)
+(InCar TA_X5)
+(InCar TA_X6)
+(InCar TA_X14)
+(InCar TA_X19)
+(InCar TA_X20)
+(Path X1 X6 )
+(Path X6 X1 )
+(= (Distance X1 X6 )4)
+(= (Distance X6 X1 )4)
+
+(Path X1 X20 )
+(Path X20 X1 )
+(= (Distance X1 X20 )3)
+(= (Distance X20 X1 )3)
+
+(Path X1 X21 )
+(Path X21 X1 )
+(= (Distance X1 X21 )1)
+(= (Distance X21 X1 )1)
+
+(Path X2 X3 )
+(Path X3 X2 )
+(= (Distance X2 X3 )3)
+(= (Distance X3 X2 )3)
+
+(Path X2 X5 )
+(Path X5 X2 )
+(= (Distance X2 X5 )5)
+(= (Distance X5 X2 )5)
+
+(Path X2 X9 )
+(Path X9 X2 )
+(= (Distance X2 X9 )8)
+(= (Distance X9 X2 )8)
+
+(Path X3 X4 )
+(Path X4 X3 )
+(= (Distance X3 X4 )2)
+(= (Distance X4 X3 )2)
+
+(Path X3 X14 )
+(Path X14 X3 )
+(= (Distance X3 X14 )5)
+(= (Distance X14 X3 )5)
+
+(Path X4 X14 )
+(Path X14 X4 )
+(= (Distance X4 X14 )5)
+(= (Distance X14 X4 )5)
+
+(Path X4 X17 )
+(Path X17 X4 )
+(= (Distance X4 X17 )3)
+(= (Distance X17 X4 )3)
+
+(Path X4 X19 )
+(Path X19 X4 )
+(= (Distance X4 X19 )3)
+(= (Distance X19 X4 )3)
+
+(Path X5 X8 )
+(Path X8 X5 )
+(= (Distance X5 X8 )7)
+(= (Distance X8 X5 )7)
+
+(Path X5 X16 )
+(Path X16 X5 )
+(= (Distance X5 X16 )7)
+(= (Distance X16 X5 )7)
+
+(Path X6 X16 )
+(Path X16 X6 )
+(= (Distance X6 X16 )9)
+(= (Distance X16 X6 )9)
+
+(Path X6 X18 )
+(Path X18 X6 )
+(= (Distance X6 X18 )3)
+(= (Distance X18 X6 )3)
+
+(Path X7 X16 )
+(Path X16 X7 )
+(= (Distance X7 X16 )1)
+(= (Distance X16 X7 )1)
+
+(Path X8 X9 )
+(Path X9 X8 )
+(= (Distance X8 X9 )3)
+(= (Distance X9 X8 )3)
+
+(Path X8 X15 )
+(Path X15 X8 )
+(= (Distance X8 X15 )1)
+(= (Distance X15 X8 )1)
+
+(Path X8 X23 )
+(Path X23 X8 )
+(= (Distance X8 X23 )1)
+(= (Distance X23 X8 )1)
+
+(Path X10 X13 )
+(Path X13 X10 )
+(= (Distance X10 X13 )6)
+(= (Distance X13 X10 )6)
+
+(Path X10 X20 )
+(Path X20 X10 )
+(= (Distance X10 X20 )5)
+(= (Distance X20 X10 )5)
+
+(Path X11 X12 )
+(Path X12 X11 )
+(= (Distance X11 X12 )5)
+(= (Distance X12 X11 )5)
+
+(Path X11 X14 )
+(Path X14 X11 )
+(= (Distance X11 X14 )5)
+(= (Distance X14 X11 )5)
+
+(Path X12 X19 )
+(Path X19 X12 )
+(= (Distance X12 X19 )3)
+(= (Distance X19 X12 )3)
+
+(Path X13 X17 )
+(Path X17 X13 )
+(= (Distance X13 X17 )4)
+(= (Distance X17 X13 )4)
+
+(Path X15 X16 )
+(Path X16 X15 )
+(= (Distance X15 X16 )1)
+(= (Distance X16 X15 )1)
+
+(Path X16 X19 )
+(Path X19 X16 )
+(= (Distance X16 X19 )2)
+(= (Distance X19 X16 )2)
+
+(Path X16 X23 )
+(Path X23 X16 )
+(= (Distance X16 X23 )2)
+(= (Distance X23 X16 )2)
+
+(Path X21 X22 )
+(Path X22 X21 )
+(= (Distance X21 X22 )1)
+(= (Distance X22 X21 )1)
+
+(EmptyHome X1)
+(EmptyHome X5)
+(EmptyHome X6)
+(EmptyHome X14)
+(EmptyHome X19)
+(EmptyHome X20)
+)
+
+  ; The goal state describe what we desire to achieve
+  (:goal (and
+( Car_At X2 )
+(not (EmptyHome X1))
+(not (EmptyHome X5))
+(not (EmptyHome X6))
+(not (EmptyHome X14))
+(not (EmptyHome X19))
+(not (EmptyHome X20))
+  ))
+)

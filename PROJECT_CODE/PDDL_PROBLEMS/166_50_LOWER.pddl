@@ -1,0 +1,113 @@
+; Problem description
+; This file describes the example input from the problem statement
+(define (problem pb1)
+  (:metric minimize (total-cost))
+  (:domain CS170)
+(:objects TA_X3 TA_X4 TA_X8 TA_X9 TA_X11 TA_X13 X1 X2 X3 X4 X5 X6 X7 X8 X9 X10 X11 X12 X13 )
+(:init(= (total-cost) 0)
+( Car_At X1 )
+(InCar TA_X3)
+(InCar TA_X4)
+(InCar TA_X8)
+(InCar TA_X9)
+(InCar TA_X11)
+(InCar TA_X13)
+(Path X1 X2 )
+(Path X2 X1 )
+(= (Distance X1 X2 )1)
+(= (Distance X2 X1 )1)
+
+(Path X1 X13 )
+(Path X13 X1 )
+(= (Distance X1 X13 )1)
+(= (Distance X13 X1 )1)
+
+(Path X2 X3 )
+(Path X3 X2 )
+(= (Distance X2 X3 )1)
+(= (Distance X3 X2 )1)
+
+(Path X2 X5 )
+(Path X5 X2 )
+(= (Distance X2 X5 )1)
+(= (Distance X5 X2 )1)
+
+(Path X3 X4 )
+(Path X4 X3 )
+(= (Distance X3 X4 )0.1)
+(= (Distance X4 X3 )0.1)
+
+(Path X4 X5 )
+(Path X5 X4 )
+(= (Distance X4 X5 )1)
+(= (Distance X5 X4 )1)
+
+(Path X5 X6 )
+(Path X6 X5 )
+(= (Distance X5 X6 )2.5)
+(= (Distance X6 X5 )2.5)
+
+(Path X5 X7 )
+(Path X7 X5 )
+(= (Distance X5 X7 )3)
+(= (Distance X7 X5 )3)
+
+(Path X6 X7 )
+(Path X7 X6 )
+(= (Distance X6 X7 )1)
+(= (Distance X7 X6 )1)
+
+(Path X7 X8 )
+(Path X8 X7 )
+(= (Distance X7 X8 )1)
+(= (Distance X8 X7 )1)
+
+(Path X7 X10 )
+(Path X10 X7 )
+(= (Distance X7 X10 )1)
+(= (Distance X10 X7 )1)
+
+(Path X9 X10 )
+(Path X10 X9 )
+(= (Distance X9 X10 )1)
+(= (Distance X10 X9 )1)
+
+(Path X10 X11 )
+(Path X11 X10 )
+(= (Distance X10 X11 )3)
+(= (Distance X11 X10 )3)
+
+(Path X10 X12 )
+(Path X12 X10 )
+(= (Distance X10 X12 )1)
+(= (Distance X12 X10 )1)
+
+(Path X11 X12 )
+(Path X12 X11 )
+(= (Distance X11 X12 )2.5)
+(= (Distance X12 X11 )2.5)
+
+(Path X12 X13 )
+(Path X13 X12 )
+(= (Distance X12 X13 )1)
+(= (Distance X13 X12 )1)
+
+(EmptyHome X3)
+(EmptyHome X4)
+(EmptyHome X8)
+(EmptyHome X9)
+(EmptyHome X11)
+(EmptyHome X13)
+)
+
+  ; The goal state describe what we desire to achieve
+  (:goal (and
+( Car_At X1 )
+(not (EmptyHome X3))
+(not (EmptyHome X4))
+(not (EmptyHome X8))
+(not (EmptyHome X9))
+(not (EmptyHome X11))
+(not (EmptyHome X13))
+  ))
+)

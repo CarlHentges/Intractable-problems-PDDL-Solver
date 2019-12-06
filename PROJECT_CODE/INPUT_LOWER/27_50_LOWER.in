@@ -1,0 +1,55 @@
+50
+20
+_n_o_d_e0 _n_o_d_e1 _n_o_d_e2 _n_o_d_e3 _n_o_d_e4 _n_o_d_e5 _n_o_d_e6 _n_o_d_e7 _n_o_d_e8 _n_o_d_e9 _n_o_d_e10 _n_o_d_e11 _n_o_d_e12 _n_o_d_e13 _n_o_d_e14 _n_o_d_e15 _n_o_d_e16 _n_o_d_e17 _n_o_d_e18 _n_o_d_e19 _n_o_d_e20 _n_o_d_e21 _n_o_d_e22 _n_o_d_e23 _n_o_d_e24 _n_o_d_e25 _n_o_d_e26 _n_o_d_e27 _n_o_d_e28 _n_o_d_e29 _n_o_d_e30 _n_o_d_e31 _n_o_d_e32 _n_o_d_e33 _n_o_d_e34 _n_o_d_e35 _n_o_d_e36 _n_o_d_e37 _n_o_d_e38 _n_o_d_e39 _n_o_d_e40 _n_o_d_e41 _n_o_d_e42 _n_o_d_e43 _n_o_d_e44 _n_o_d_e45 _n_o_d_e46 _n_o_d_e47 _n_o_d_e48 _n_o_d_e49
+_n_o_d_e28 _n_o_d_e39 _n_o_d_e46 _n_o_d_e21 _n_o_d_e7 _n_o_d_e12 _n_o_d_e15 _n_o_d_e1 _n_o_d_e47 _n_o_d_e4 _n_o_d_e18 _n_o_d_e19 _n_o_d_e37 _n_o_d_e48 _n_o_d_e9 _n_o_d_e44 _n_o_d_e23 _n_o_d_e27 _n_o_d_e24 _n_o_d_e22
+_n_o_d_e6
+x x 1 1 1 1 1 1 1 x x x x x x x x 1 1 1 x x 1 1 x x x x x 1 x x 1 1 x x x x 1 x 1 x 1 x 1 1 1 1 x x
+x x x x 1 x x x x 1 x x x x x 1 x 1 1 x x x x x 1 1 x 1 1 1 x x 1 x x 1 1 x 1 x x x x x x 1 x 1 x x
+1 x x 1 x x x x x x x x x x x x 1 1 1 x x 1 1 x 1 x 1 1 x x x x x 1 1 x 1 1 1 x x x 1 x 1 x x x x x
+1 x 1 x 1 x x 1 1 x x x 1 1 x x x 1 1 1 x 1 x 1 1 x 1 x x x x x 1 1 x 1 x x x x x 1 x 1 x 1 x 1 x x
+1 1 x 1 x x x x 1 x x x x 1 x 1 1 1 x 1 1 x x x x 1 x 1 x 1 1 1 x 1 1 x x x 1 1 x x x x 1 1 x 1 1 x
+1 x x x x x x 1 1 1 x x 1 1 x 1 x x 1 x x x x 1 x x x x 1 x 1 x 1 x x x 1 x 1 1 x x 1 x x 1 x 1 x x
+1 x x x x x x x 1 1 x x 1 x x x 1 1 1 1 1 1 1 x x 1 x x x x 1 x x x 1 1 x 1 1 x x x x x x 1 x x 1 1
+1 x x 1 x 1 x x 1 x x x 1 x 1 x 1 1 x x x x 1 x 1 x x x 1 1 x x 1 x x x x 1 x x x x x x x x x 1 x 1
+1 x x 1 1 1 1 1 x x 1 x 1 x 1 x 1 x x x x 1 x x x x 1 x x 1 1 x x x x x x x x x x x 1 x 1 x x x 1 x
+x 1 x x x 1 1 x x x 1 1 1 x x x x x 1 x 1 x x x 1 x x x x 1 x x 1 1 1 x x 1 1 x 1 x x x 1 x x 1 1 1
+x x x x x x x x 1 1 x x 1 x x x x x x 1 1 x 1 x 1 1 x x 1 x x x x x 1 x x 1 x x x x 1 x 1 x 1 x x 1
+x x x x x x x x x 1 x x 1 x 1 1 x x 1 x 1 x x 1 x 1 x x x x x 1 1 1 1 x x x x 1 x 1 x 1 1 x 1 x 1 1
+x x x 1 x 1 1 1 1 1 1 1 x 1 x x x x x 1 x x 1 x x 1 1 x 1 1 1 x 1 1 x x 1 x x x x x x 1 x x x x x x
+x x x 1 1 1 x x x x x x 1 x 1 1 x 1 1 1 1 1 x x 1 x x x 1 x 1 x 1 x 1 x x 1 x 1 1 x x x x x 1 1 x x
+x x x x x x x 1 1 x x 1 x 1 x 1 1 x x x 1 x 1 x x x 1 x x 1 x x 1 x x x 1 x x x 1 x 1 x x 1 1 x x 1
+x 1 x x 1 1 x x x x x 1 x 1 1 x 1 x x x x x x 1 1 x x x x x 1 x x x 1 x x x x x x x x 1 x x x x 1 x
+x x 1 x 1 x 1 1 1 x x x x x 1 1 x 1 x 1 x x 1 1 x x x x 1 x 1 x 1 1 1 1 1 x x 1 x x x x x x x x x x
+1 1 1 1 1 x 1 1 x x x x x 1 x x 1 x x x 1 1 x 1 x x x x 1 x 1 1 1 1 x 1 x x 1 x x 1 1 x x 1 x 1 1 x
+1 1 1 1 x 1 1 x x 1 x 1 x 1 x x x x x 1 x x x 1 1 x x x x x x 1 x 1 x 1 1 1 x 1 x 1 x x x 1 x x x x
+1 x x 1 1 x 1 x x x 1 x 1 1 x x 1 x 1 x x x x x 1 1 1 x 1 1 x 1 1 x x 1 x x x 1 x x x x 1 x x 1 1 x
+x x x x 1 x 1 x x 1 1 1 x 1 1 x x 1 x x x x x x x x 1 x 1 1 1 x x x 1 x 1 1 x x 1 x 1 1 1 1 x x 1 x
+x x 1 1 x x 1 x 1 x x x x 1 x x x 1 x x x x x 1 x 1 x 1 x 1 1 x x 1 x 1 x x x 1 x 1 1 x 1 x 1 x x x
+1 x 1 x x x 1 1 x x 1 x 1 x 1 x 1 x x x x x x x 1 1 1 x 1 1 x x x x x 1 1 1 x x 1 1 x x 1 x 1 x 1 1
+1 x x 1 x 1 x x x x x 1 x x x 1 1 1 1 x x 1 x x x x x x 1 1 1 1 x x 1 x x x x x x 1 1 x x 1 1 x 1 1
+x 1 1 1 x x x 1 x 1 1 x x 1 x 1 x x 1 1 x x 1 x x 1 x x x 1 1 x 1 x 1 x x 1 x x x 1 x x 1 1 1 1 1 x
+x 1 x x 1 x 1 x x x 1 1 1 x x x x x x 1 x 1 1 x 1 x 1 1 x 1 x 1 1 1 1 x x x 1 1 x 1 x x x x x x x 1
+x x 1 1 x x x x 1 x x x 1 x 1 x x x x 1 1 x 1 x x 1 x x x x 1 x 1 x x 1 x x 1 1 x x x 1 x 1 x x 1 1
+x 1 1 x 1 x x x x x x x x x x x x x x x x 1 x x x 1 x x 1 x x 1 1 1 1 x 1 x x 1 x x 1 x 1 1 x 1 x 1
+x 1 x x x 1 x 1 x x 1 x 1 1 x x 1 1 x 1 1 x 1 1 x x x 1 x 1 1 x 1 x x 1 x x 1 x 1 x 1 x x 1 x x x 1
+1 1 x x 1 x x 1 1 1 x x 1 x 1 x x x x 1 1 1 1 1 1 1 x x 1 x x 1 1 x x 1 1 x x x 1 x x 1 x 1 x x x 1
+x x x x 1 1 1 x 1 x x x 1 1 x 1 1 1 x x 1 1 x 1 1 x 1 x 1 x x 1 1 x x 1 1 1 x x x 1 1 x x 1 1 1 x 1
+x x x x 1 x x x x x x 1 x x x x x 1 1 1 x x x 1 x 1 x 1 x 1 1 x x x x 1 x x 1 x x x x x 1 x x x 1 1
+1 1 x 1 x 1 x 1 x 1 x 1 1 1 1 x 1 1 x 1 x x x x 1 1 1 1 1 1 1 x x x x x x 1 x x 1 1 1 x 1 x 1 x 1 x
+1 x 1 1 1 x x x x 1 x 1 1 x x x 1 1 1 x x 1 x x x 1 x 1 x x x x x x x x 1 x 1 x x 1 x x x x 1 1 1 1
+x x 1 x 1 x 1 x x 1 1 1 x 1 x 1 1 x x x 1 x x 1 1 1 x 1 x x x x x x x x x x x 1 x x x 1 1 x x x x x
+x 1 x 1 x x 1 x x x x x x x x x 1 1 1 1 x 1 1 x x x 1 x 1 1 1 1 x x x x x 1 1 x 1 1 1 1 x x 1 1 x x
+x 1 1 x x 1 x x x x x x 1 x 1 x 1 x 1 x 1 x 1 x x x x 1 x 1 1 x x 1 x x x x 1 x x 1 x x x x 1 x x x
+x x 1 x x x 1 1 x 1 1 x x 1 x x x x 1 x 1 x 1 x 1 x x x x x 1 x 1 x x 1 x x x 1 x x x x 1 x x 1 x 1
+1 1 1 x 1 1 1 x x 1 x x x x x x x 1 x x x x x x x 1 1 x 1 x x 1 x 1 x 1 1 x x x x x x x 1 x 1 1 1 x
+x x x x 1 1 x x x x x 1 x 1 x x 1 x 1 1 x 1 x x x 1 1 1 x x x x x x 1 x x 1 x x x 1 x x x x x x x x
+1 x x x x x x x x 1 x x x 1 1 x x x x x 1 x 1 x x x x x 1 1 x x 1 x x 1 x x x x x 1 1 x x 1 x x x 1
+x x x 1 x x x x x x x 1 x x x x x 1 1 x x 1 1 1 1 1 x x x x 1 x 1 1 x 1 1 x x 1 1 x x x x x 1 x 1 1
+1 x 1 x x 1 x x 1 x 1 x x x 1 x x 1 x x 1 1 x 1 x x x 1 1 x 1 x 1 x x 1 x x x x 1 x x 1 x x 1 1 x 1
+x x x 1 x x x x x x x 1 1 x x 1 x x x x 1 x x x x x 1 x x 1 x x x x 1 1 x x x x x x 1 x 1 x x x x 1
+1 x 1 x 1 x x x 1 1 1 1 x x x x x x x 1 1 1 1 x 1 x x 1 x x x 1 1 x 1 x x 1 1 x x x x 1 x x x x x x
+1 1 x 1 1 1 1 x x x x x x x 1 x x 1 1 x 1 x x 1 1 x 1 1 1 1 1 x x x x x x x x x 1 x x x x x 1 x x x
+1 x x x x x x x x x 1 1 x 1 1 x x x x x x 1 1 1 1 x x x x x 1 x 1 1 x 1 1 x 1 x x 1 1 x x 1 x x 1 1
+1 1 x 1 1 1 x 1 x 1 x x x 1 x x x 1 x 1 x x x x 1 x x 1 x x 1 x x 1 x 1 x 1 1 x x x 1 x x x x x 1 1
+x x x x 1 x 1 x 1 1 x 1 x x x 1 x 1 x 1 1 x 1 1 1 x 1 x x x x 1 1 1 x x x x 1 x x 1 x x x x 1 1 x x
+x x x x x x 1 1 x 1 1 1 x x 1 x x x x x x x 1 1 x 1 1 1 1 1 1 1 x 1 x x x 1 x x 1 1 1 1 x x 1 1 x x
