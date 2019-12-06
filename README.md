@@ -1,8 +1,8 @@
 # Intractable-problems-PDDL-Solver
 ## Running the program
 
-The solver is run using the ``python3 solveAll.py``  
-found in the AutomatedSolver directory.  
+The solver is run using ``python3 solveAll.py``  
+found in the /AutomatedSolver/ directory.  
 Before running this file several requirements are needed:
 ## Requirements
 1. **LAPKT** - the Lightweight Autonomous Planning Toolkit, found here: http://lapkt.org/index.php?title=Main_Page
