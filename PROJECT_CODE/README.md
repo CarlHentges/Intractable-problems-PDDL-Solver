@@ -6,6 +6,7 @@ The solver is run using ``python3 solveAll.py``
 Once you have done this the OUPUT directory will hold the solutions to the problems.  
 
 ## Requirements
+1. **Ubuntu 18.04.3 LTS** - this project was created and run on an Ubuntu 18.04.3 machine, *(it may be possible to run on other systems)* nevertheless the author assumes that the user is running on the above mentioned system.
 1. **LAPKT** - the Lightweight Autonomous Planning Toolkit, found here: http://lapkt.org/index.php?title=Main_Page
 	1. download this toolkit
 	2. follow the instructions to install the toolkit and build the planners, specifically the at_bfs planner
