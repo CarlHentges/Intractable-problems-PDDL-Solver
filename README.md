@@ -1,8 +1,8 @@
 # Intractable-problems-PDDL-Solver
 ## Running the program
 
-The solver is run using the 
-	python3 solveAll.py 
+The solver is run using the  
+	python3 solveAll.py  
 found in the AutomatedSolver directory.  
 Before running this file several requirements are needed:
 ## Requirements
