@@ -8,7 +8,7 @@ Once you have done this the OUPUT directory will hold the solutions to the probl
 ## Requirements
 1. **Ubuntu 18.04.3 LTS** - this project was created and run on an Ubuntu 18.04.3 machine, *(it may be possible to run on other systems)* nevertheless the author assumes that the user is running on the above mentioned system.
 2. **Python 3.6.8** this project was written in this version of python *(it may be possible to run on other versions)* nevertheless the author assumes that the user is running the above mentioned version of python.
-3. **LAPKT** - the Lightweight Autonomous Planning Toolkit, found here: http://lapkt.org/index.php?title=Main_Page
+3. **LAPKT** - the Lightweight Autonomous Planning Toolkit, found here: http://lapkt.org/index.php?title=Download
 	1. download this toolkit
 	2. follow the instructions to install the toolkit and build the planners, specifically the at_bfs planner
 4. __(optional)__ **DUAL_BFWS** - this is a second planner that was used for some of the solutions, it can be downloaded here: https://ipc2018-classical.bitbucket.io/
