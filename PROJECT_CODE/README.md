@@ -1,4 +1,4 @@
-# Intractable-problems-PDDL-Solver (Team: Turings Little Helpers)
+# Intractable-problems-PDDL-Solver (Team: Turing's Little Helpers)
 ## Running the program
 
 The solver is run using ``python3 solveAll.py`` 
@@ -13,9 +13,10 @@ Once you have done this the OUPUT directory will hold the solutions to the probl
 3. **PLANNER** - the PDDL planner used to solve the problem
 	1. PDDL_PLANNER - point this to the **at_bfs** or **bfws** files installed in step 1 and 2.
 ## Trouble Shooting
-### make sure that the ``solveAll.py`` file has the correct path to the planner
-### Some of the common problems that you may encounter are missing directories
-1. **DIRECTORIES** - the program expects several directories to also exist, these are already included, no additional steps are neccessary.
+### Make sure that the ``solveAll.py`` file has the correct path to the planner!
+### Some other common problems include missing directories.
+**It may also be useful to make sure that all directories (other than inputs) are empty.**
+1. **DIRECTORIES** - the program expects several directories to also exist, these are already included, no additional steps are necessary.
 	1. INPUT_DIRECTORY - this is where the input file are.
 	2. NORMALIZED_INPUT_DIRECTORY - this an intermediary directory used to hold modified versions of the input problems.
 	3. PDDL_INPUT_DIRECTORY - this an intermediary directory used to hold modified input files that the PDDL planner can solve.
@@ -27,7 +28,7 @@ Once you have done this the OUPUT directory will hold the solutions to the probl
 	2. outputParser.py - found in /Parser/
 	3. outputToNorm.py - found in /Parser/
 	4. problemParser.py - found in /Parser/
-## Usefull links:
+## Useful links:
 https://en.wikipedia.org/wiki/Planning_Domain_Definition_Language  
 http://lapkt.org/index.php?title=Documentation  
 https://bitbucket.org/ipc2018-classical/team20/src/master/  
