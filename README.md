@@ -3,7 +3,7 @@
 
 The solver is run using ``python3 solveAll.py``  
 found in the /AutomatedSolver/ directory.  
-Before running this file several requirements are needed:
+**Before running this file several requirements are needed:**
 ## Requirements
 1. **LAPKT** - the Lightweight Autonomous Planning Toolkit, found here: http://lapkt.org/index.php?title=Main_Page
 	1. download this toolkit
