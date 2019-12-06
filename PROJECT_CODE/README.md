@@ -33,6 +33,7 @@ Once you have done this the OUPUT directory will hold the solutions to the probl
 ## Useful links:
 https://en.wikipedia.org/wiki/Planning_Domain_Definition_Language  
 http://lapkt.org/index.php?title=Documentation  
+https://github.com/LAPKT-dev/LAPKT-public  
 https://bitbucket.org/ipc2018-classical/team20/src/master/  
 https://ipc2018-classical.bitbucket.io/  
 
