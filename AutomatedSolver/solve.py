@@ -17,9 +17,8 @@ inputToInvariant = "/home/carl/CS170_Project/Intractable-problems-PDDL-Solver/Pa
 outputParser = "/home/carl/CS170_Project/Intractable-problems-PDDL-Solver/Parser/outputParser.py"
 outputToNorm = "/home/carl/CS170_Project/Intractable-problems-PDDL-Solver/Parser/outputToNorm.py"
 problemParser = "/home/carl/CS170_Project/Intractable-problems-PDDL-Solver/Parser/problemParser.py"
-output_validator = "/home/carl/CS170_Project/project-fa19/output_validator.py"
 
-pddlSolved = os.listdir(PDDL_OUTPUT_DIRECTORY)
+pddlSolved = os.listdir(OUTPUT_DIRECTORY)
 def isSolved(name):
 	for file in pddlSolved:
 		#print(name[:len(name)-3],end="")

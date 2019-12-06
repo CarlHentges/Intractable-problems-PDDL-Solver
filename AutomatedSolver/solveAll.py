@@ -57,10 +57,10 @@ for file in os.listdir(INPUT_DIRECTORY):
 		os.system("python3 "+inputToInvariant+" "+INPUT_DIRECTORY+file+" "+NORMALIZED_INPUT_DIRECTORY+file[:len(file)-3]+"_LOWER.in")
 for file in os.listdir(NORMALIZED_INPUT_DIRECTORY):
 		os.system("python3 "+problemParser+" "+NORMALIZED_INPUT_DIRECTORY+file+" "+PDDL_INPUT_DIRECTORY+file[:len(file)-3]+".pddl")
-for file in os.listdir(PDDL_INPUT_DIRECTORY):
-	if "100" in file and not isSolved(file) and int(file[1]) >=5:
-		os.system(PDDL_PLANNER +" --domain "+PDDL_DOMAIN+" --problem "+PDDL_INPUT_DIRECTORY+file+" --output "+PDDL_OUTPUT_DIRECTORY+file[:len(file)-5]+"SOLVED_.pddl")
-for file in os.listdir(PDDL_OUTPUT_DIRECTORY):
-		os.system("python3 "+outputToNorm+" "+PDDL_OUTPUT_DIRECTORY+file+" "+PDDL_NORMALIZED_OUTPUT_DIRECTORY+file[:len(file)-5]+".out")
-for file in os.listdir(PDDL_NORMALIZED_OUTPUT_DIRECTORY):
-		os.system("python3 "+outputParser+" "+PDDL_NORMALIZED_OUTPUT_DIRECTORY+file+" "+OUTPUT_DIRECTORY+file[:len(file)-17]+".out")
+#for file in os.listdir(PDDL_INPUT_DIRECTORY):
+#	if "100" in file and not isSolved(file) and int(file[1]) >=5:
+#		os.system(PDDL_PLANNER +" --domain "+PDDL_DOMAIN+" --problem "+PDDL_INPUT_DIRECTORY+file+" --output #"+PDDL_OUTPUT_DIRECTORY+file[:len(file)-5]+"SOLVED_.pddl")
+#for file in os.listdir(PDDL_OUTPUT_DIRECTORY):
+#		os.system("python3 "+outputToNorm+" "+PDDL_OUTPUT_DIRECTORY+file+" "+PDDL_NORMALIZED_OUTPUT_DIRECTORY+file[:len(file)-5]+".out")
+#for file in os.listdir(PDDL_NORMALIZED_OUTPUT_DIRECTORY):
+#		os.system("python3 "+outputParser+" "+PDDL_NORMALIZED_OUTPUT_DIRECTORY+file+" "+OUTPUT_DIRECTORY+file[:len(file)-17]+".out")
