@@ -14,6 +14,8 @@ Once you have done this the OUPUT directory will hold the solutions to the probl
 4. __(optional)__ **DUAL_BFWS** - this is a second planner that was used for some of the solutions, it can be downloaded here: https://ipc2018-classical.bitbucket.io/
 5. **PLANNER** - the PDDL planner used to solve the problem
 	1. PDDL_PLANNER - point this to the **at_bfs** or **bfws** files installed in step 1 and 2.
+6. **inputs** place the input problem files into the /inputs/ directory.
+
 ## Trouble Shooting:
 ### Make sure that the ``solveAll.py`` file has the correct path to the planner!
 ### Some other common problems include missing directories.
