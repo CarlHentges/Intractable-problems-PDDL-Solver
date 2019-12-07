@@ -1,4 +1,5 @@
 # Intractable-problems-PDDL-Solver
+![Diagram of Program Flow](https://github.com/CarlHentges/Intractable-problems-PDDL-Solver/blob/master/image.png)
 ## Running the program
 
 The solver is run using ``python3 solveAll.py``  
